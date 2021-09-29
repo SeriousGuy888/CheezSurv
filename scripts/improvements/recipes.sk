@@ -1,0 +1,2 @@
+on join:
+    make console execute command "/execute run recipe give %player% *"
