@@ -8,4 +8,19 @@ on script load:
   set {propaganda::*} to {_body} split at new line
 
 every {@interval}:
-  send action bar "%random element out of {propaganda::*}%" to all players
+  loop all players:
+    {propaganda.%loop-player%} is not false
+    send action bar "%random element out of {propaganda::*}%" to loop-player
+
+  
+
+command /togglepropaganda:
+  aliases: /togglequotes
+  trigger:
+    set {propaganda.%player%} to true if {propaganda.%player%} is not set
+    if {propaganda.%player%} is false:
+      set {propaganda.%player%} to true
+      send "You will now see quotes in your actionbar."
+    else if {propaganda.%player%} is true:
+      set {propaganda.%player%} to false
+      send "You will no longer see quotes in your actionbar."
