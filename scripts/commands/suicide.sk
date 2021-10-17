@@ -5,7 +5,7 @@ command /suicide:
 
 on death:
   {%player%.suiciding} is true
-  set death message to "%player% commited die"
+  set death message to "%player% committed suicide"
   set {%player%.suiciding} to false
 
 on damage:
