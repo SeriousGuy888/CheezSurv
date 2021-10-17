@@ -12,8 +12,6 @@ command /afk <text="[No Reason Provided]">:
 
       broadcast "%{afk_msg}% §efor reason §7§o%{%player%.afk.reason}%"
       send ":keyboard: **%uncoloured {afk_msg}% for reason** `%{%player%.afk.reason}%`" to channel with id "{@discordChannelId}" with "Cheezy"
-
-      # make console execute command "/tab player %player% tabsuffix &b [AFK]"
     else if {%player%.afk} is true:
       set {%player%.afk} to false
       set {afk_msg} to "§e%player% (%{%player%.nick}%) is no longer AFK" if {%player%.nick} is set
@@ -22,14 +20,12 @@ command /afk <text="[No Reason Provided]">:
       broadcast "%{afk_msg}%"
       send ":keyboard: **%uncoloured {afk_msg}%**" to channel with id "{@discordChannelId}" with "Cheezy"
 
-      # make console execute command "/tab player %player% tabsuffix"
-
 command /checkafk <Player>:
   trigger:
     if {%arg-1%.afk} is false:
-      send "§7%arg-1%§7 is not AFK!"
+      send "§b%arg-1%§b is not AFK"
       stop
-    send "§7%arg-1%§7 is AFK for reason %{%arg-1%.afk.reason}%"
+    send "§b%arg-1%§b is AFK for reason %{%arg-1%.afk.reason}%"
 
 on chat:
   loop all players:
@@ -42,13 +38,11 @@ on chat:
     send action bar "§bYou have been mentioned in chat by %player%" to loop-value
     play sound "block.note_block.pling" to loop-value
     if {%loop-value%.afk} is true:
-      wait 1 tick
-      send "§b%loop-value%§b is currently AFK."
+      make player execute command "/checkafk %loop-value%"
 
 on quit:
-  if {%player%.afk} is true:
-    set {%player%.afk} to false
-    # make console execute command "/tab player %player% tabsuffix"
+  {%player%.afk} is true:
+  set {%player%.afk} to false
 
 on any movement:
   if {%player%.afk} is true:
