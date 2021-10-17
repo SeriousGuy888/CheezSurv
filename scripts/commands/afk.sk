@@ -41,7 +41,7 @@ on chat:
       make player execute command "/checkafk %loop-value%"
 
 on quit:
-  {%player%.afk} is true:
+  {%player%.afk} is true
   set {%player%.afk} to false
 
 on any movement:
