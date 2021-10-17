@@ -26,9 +26,9 @@ command /spec [<text>]:
   trigger:
     if player's gamemode is survival:
       delete {%player%.spec.loc}
-      delete {%player%.spec.mode}
+      set {%player%.spec.activated} false
 
-    if {%player%.spec.mode} is not set: # survival
+    if {%player%.spec.activated} is false: # survival
       if {spec.disabled} is true:
         send "§c/spec is currently disabled. Ask an admin if this is a mistake."
         stop
@@ -39,44 +39,21 @@ command /spec [<text>]:
         stop
 
       set {%player%.spec.loc} to player's location
-      if arg-1 is "creative":
-        set {%player%.spec.mode} to 1
-        set player's gamemode to creative
-        send action bar "Going to the creative world!" to player
-        teleport player to spawn of world "creative"
-        enable flight for player
-      else:
-        set {%player%.spec.mode} to 0
-        set player's gamemode to spectator
-        send action bar "Activated Spectator Mode" to player
+      set {%player%.spec.activated} to true
+      set player's gamemode to spectator
+      send action bar "Activated Spectator Mode" to player
     else:
       if {%player%.spec.loc} is not set:
         send "§cYou don't have a spec location! Ask an admin for help."
         stop
 
-      if {%player%.spec.mode} = 0: # spectator
-        send action bar "Deativated Spectator Mode" to player
-      else if {%player%.spec.mode} = 1: # creative
-        send action bar "Going back to survival!" to player
+      send action bar "Deativated Spectator Mode" to player
       
       set player's gamemode to survival
       teleport player to {%player%.spec.loc}
       disable flight for player
       delete {%player%.spec.loc}
-      delete {%player%.spec.mode}
-
-
-command /create:
-  aliases: /cr
-  trigger:
-    make player execute command "/spec creative"
-
-
-on world change:
-  player's world is "creative"
-  set player's gamemode to creative
-  enable flight for player
-
+      set {%player%.spec.activated} to false
 
 command /dimension [<text>]:
   executable by: players
