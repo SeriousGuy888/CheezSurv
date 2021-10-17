@@ -161,59 +161,6 @@ discord command balancetop [<OfflinePlayer>]:
     reply with {_msg}
 
 
-discord command stocklookup [<text>]:
-  prefixes: {@prefixes}
-  trigger:
-    if arg-1 is not set:
-      reply with "s2!stocklookup <Ticker Symbol>"
-      stop
-    set {_ticker} to arg-1 in upper case
-    if {stocks.ticker.%{_ticker}%} is set:
-      reply with "**%{_ticker}%**: *%{stocks.ticker.%{_ticker}%}%* | %{stocks.value.%{_ticker}%}% coins%nl%**Registered owners**: %{stocks.owners.%{_ticker}%::*} otherwise ""[NONE]""%"
-    else:
-      reply with "%{_ticker}% is not a registered ticker symbol."
-
-discord command stocklist [<OfflinePlayer>]:
-  prefixes: {@prefixes}
-  trigger:
-    set {_p} to arg-1
-    set {_link_defaulted} to false
-
-    if arg-1 is not set:
-      if {discord_link.link.discord.%discord id of author of event-message%} is set:
-        set {_p} to {discord_link.link.discord.%discord id of author of event-message%}
-        set {_link_defaulted} to true
-      else:
-        reply with {@specifyPlayer}
-        stop
-    
-    set {_m} to "**Stocks of %{_p}%**"
-    set {_net_worth} to 0
-    loop {stocks.registered::*}:
-      set {stocks.ownership.%{_p}%.%{stocks.registered::%loop-index%}%} to 0 if {stocks.ownership.%{_p}%.%{stocks.registered::%loop-index%}%} is not set
-      set {_m} to "%{_m}%%nl%- __%{stocks.registered::%loop-index%}%__: %{stocks.value.%{stocks.registered::%loop-index%}%}% coins%nl%  Owned: %{stocks.ownership.%{_p}%.%{stocks.registered::%loop-index%}%}% shares."
-      add {stocks.value.%{stocks.registered::%loop-index%}%} * {stocks.ownership.%{_p}%.%{stocks.registered::%loop-index%}%} to {_net_worth}
-    set {_m} to "%{_m}%%nl%%nl%**NET WORTH IN STOCKS**%nl%%{_net_worth}% coins"
-
-    set {_msg} to a message builder
-    append line {@linkDefaultedMsg} if {_link_defaulted} is true
-    append line {_m}
-
-    reply with {_msg}
-
-discord command stockbalance [<text>]:
-  prefixes: {@prefixes}
-  aliases: stockbal
-  trigger:
-    if arg-1 is not set:
-      reply with "s2!stockbalance <ticker>"
-      stop
-    set {_ticker} to arg-1 in upper case
-    if {stocks.registered::*} does not contain {_ticker}:
-      reply with "Stock not registered!"
-    
-    reply with "%{_ticker}%: %{stocks.balance.%{_ticker}%}%"
-
 discord command lastplayed [<OfflinePlayer>]:
   prefixes: {@prefixes}
   trigger:
@@ -239,12 +186,6 @@ discord command lastplayed [<OfflinePlayer>]:
     append line "%{last_played.%{_p}%.leave}%"
     append line "%difference between now and {last_played.%{_p}%.leave}% ago"
     reply with {_msg}
-
-discord command playtime:
-  prefixes: {@prefixes}
-  aliases: pt
-  trigger:
-    reply with "merged into stats command"
 
 
 discord command locations [<text>]:
