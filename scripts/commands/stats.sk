@@ -1,12 +1,8 @@
 function timeToText(t: timespan) :: text:
-  # set {_w} to 0
   set {_d} to 0
   set {_h} to 0
   set {_m} to 0
   set {_s} to 0
-  # while {_t} > 1 week:
-  #   subtract 1 day from {_t}
-  #   add 1 to {_w}
   while {_t} > 1 day:
     subtract 1 day from {_t}
     add 1 to {_d}
@@ -36,12 +32,6 @@ command /stats <OfflinePlayer=%player%>:
     send "§3Other Humans Tagged: §b%{stats.%arg-1%.tagged}%"
     send "§3Times Tagged by Other Humans: §b%{stats.%arg-1%.tagged_by}%%nl%"
 
-    # set {_m_lvl} to floor({magic.xp::%arg-1%.level})
-    # set {_m_pts} to floor({magic.xp::%arg-1%.points})
-    # set {_m_to_next_lvl} to floor(getMagicXpToLevelUp({_m_lvl}))
-    # send "§5Magic Level: §d%{_m_lvl}%"
-    # send "§5Magic XP: §d%{_m_pts}%§d/%{_m_to_next_lvl}%%nl%"
-
     send "§2Playtime: §a%timeToText({playtime.%arg-1%})%§7<tooltip:*Only recalculates every time the player leaves; *While the default Minecraft playtime statistic exists, we do not use it as it requires the player to be online to access.>*<reset>"
     send "§2Login Streak: §a%{login_streak::%arg-1%.streak}%"
 
@@ -58,7 +48,6 @@ on death of player:
   add 1 to {stats.%victim%.deaths}
 
   attacker is a player
-  # set {stats.%attacker%.murders} to 0 if {stats.%attacker%.murders} is not set
   add 1 to {stats.%attacker%.murders}
 
 on join:
@@ -70,8 +59,3 @@ on quit:
 command /lastplayed <offlineplayer=%player%>:
   trigger:
     send "%nl%§2§lLast Played §a§l%arg-1%%nl%%nl%§3§lLast Joined§b%nl%%{last_played.%arg-1%.join}%%nl%§b%difference between now and {last_played.%arg-1%.join}% §3ago%nl%%nl%§3§lLast Left%nl%§b%{last_played.%arg-1%.leave}%%nl%§b%difference between now and {last_played.%arg-1%.leave}% §3ago"
-
-command /playtime <offlineplayer=%player%>:
-  aliases: /pt
-  trigger:
-    send "The /playtime command has been merged into /stats."
