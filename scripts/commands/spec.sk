@@ -26,7 +26,10 @@ command /spec [<text>]:
   trigger:
     if player's gamemode is survival:
       delete {%player%.spec.loc}
-      set {%player%.spec.activated} false
+      set {%player%.spec.activated} to false
+
+    if {%player%.spec.activated} is not set:
+      set {%player%.spec.activated} to false
 
     if {%player%.spec.activated} is false: # survival
       if {spec.disabled} is true:
