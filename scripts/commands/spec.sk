@@ -109,6 +109,7 @@ command /spectp <player>:
       stop
     teleport player to arg-1
     send action bar "Teleporting to %arg-1%..." to player
+    wait 1 tick
     set gamemode of player to spectator
 
 on join:
