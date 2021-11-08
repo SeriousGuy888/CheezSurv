@@ -1,6 +1,3 @@
-options:
-  discordChannelId: %{config.discord_chat}%
-
 on death of villager:
   if victim has scoreboard tag "no_villager_death_message":
     stop
@@ -26,8 +23,6 @@ on death of villager:
   set {_nloc::*} to nearestLocation(location of victim) split at "|"
   set {villager_death_messages::%uuid of victim%} to "%{villager_death_messages::%uuid of victim%}% §7§o[%round({_nloc::2} parsed as number)%§7§om from %{_nloc::1} in uppercase%]"
 
-
-  send ":skull: **%uncoloured {villager_death_messages::%uuid of victim%}% at %floor(x-coordinate of victim)% %floor(y-coordinate of victim)% %floor(z-coordinate of victim)% in %world of victim%**" to channel with id "{@discordChannelId}" with "Cheezy"
   loop all players:
     set {villager_death_messages.subscribed.%loop-player%} to true if {villager_death_messages.subscribed.%loop-player%} is not set
     {villager_death_messages.subscribed.%loop-player%} is true
