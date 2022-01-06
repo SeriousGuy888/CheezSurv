@@ -5,6 +5,7 @@ custom nether portals
 graves
 more mob heads
 nether portal coords
+player head drops
 track raw statistics
 track statistics
 villager workstation highlights
