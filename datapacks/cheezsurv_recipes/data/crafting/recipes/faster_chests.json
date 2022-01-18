@@ -2,15 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "###",
-    "#A#",
+    "# #",
     "###"
   ],
   "key": {
     "#": {
       "tag": "minecraft:logs"
-    },
-    "A": {
-      "item": "minecraft:air"
     }
   },
   "result": {
