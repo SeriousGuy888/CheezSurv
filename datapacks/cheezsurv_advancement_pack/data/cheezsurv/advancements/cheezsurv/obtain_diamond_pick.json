@@ -29,5 +29,5 @@
   "rewards": {
     "experience": 100
   },
-  "parent": "cheezsurv:cheezsurv/stripmining"
+  "parent": "cheezsurv:cheezsurv/obtain_iron_ore"
 }

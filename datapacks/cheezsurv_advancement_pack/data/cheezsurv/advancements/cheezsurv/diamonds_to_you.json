@@ -4,7 +4,7 @@
       "text": "Diamonds to You!"
     },
     "description": {
-      "text": "This is a recreation of one of the original achievements. Now it's a CheezSurv advancement. Throw a diamond to a player or zombie."
+      "text": "This is a recreation of one of the original achievements. Throw a diamond to a player or zombie."
     },
     "icon": {
       "item": "minecraft:diamond"
@@ -47,5 +47,5 @@
   "rewards": {
     "experience": 15
   },
-  "parent": "cheezsurv:cheezsurv/stripmining"
+  "parent": "cheezsurv:cheezsurv/obtain_iron_ore"
 }
