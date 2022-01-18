@@ -15,25 +15,13 @@
     "hidden": false
   },
   "criteria": {
-      "main": {
-        "trigger": "minecraft:location",
-        "conditions": {
-          "biome": "minecraft:mushroom_fields"
-        }
-      },
-      "shore": {
-        "trigger": "minecraft:location",
-        "conditions": {
-          "biome": "minecraft:mushroom_field_shore"
-        }
+    "main": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "minecraft:mushroom_fields"
       }
+    }
   },
-  "requirements": [
-    [
-      "main",
-      "shore"
-    ]
-  ],
   "rewards": {
     "experience": 100
   },
