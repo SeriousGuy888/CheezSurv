@@ -4,7 +4,7 @@
       "text": "The Nether Update"
     },
     "description": {
-      "text": "New stuff to do in the pits of hell!"
+      "text": "🔥🔥🔥"
     },
     "icon": {
       "item": "minecraft:netherrack",
@@ -23,5 +23,5 @@
       }
     }
   },
-  "parent": "cheezsurv:cheezsurv/swimming_in_lava"
+  "parent": "cheezsurv:cheezsurv/obtain_diamond_pick"
 }

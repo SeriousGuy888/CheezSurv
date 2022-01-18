@@ -1,13 +1,13 @@
 {
   "display": {
     "title": {
-      "text": "Magical Solutions"
+      "text": "Magical Merchantry"
     },
     "description": {
       "text": "Trade with a villager for an enchanted book of any type."
     },
     "icon": {
-      "item": "minecraft:enchanted_book"
+      "item": "minecraft:bookshelf"
     },
     "frame": "goal",
     "show_toast": true,

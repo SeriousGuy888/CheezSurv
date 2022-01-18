@@ -29,5 +29,5 @@
   "rewards": {
     "experience": 20
   },
-  "parent": "cheezsurv:cheezsurv/place_crafting_table"
+  "parent": "cheezsurv:cheezsurv/obtain_diamond"
 }

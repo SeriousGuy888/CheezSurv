@@ -1,15 +1,15 @@
 {
   "display": {
     "title": {
-      "text": "Coal Shortage"
+      "text": "Otherside"
     },
     "description": {
-      "text": "Have a stack or more of charcoal in your inventory."
+      "text": "Obtain an Otherside music disc."
     },
     "icon": {
-      "item": "minecraft:charcoal"
+      "item": "minecraft:music_disc_otherside"
     },
-    "frame": "task",
+    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
@@ -20,9 +20,9 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:charcoal"],
+            "items": ["minecraft:music_disc_otherside"],
             "count": {
-              "min": 64
+              "min": 1
             }
           }
         ]
@@ -30,7 +30,7 @@
     }
   },
   "rewards": {
-      "experience": 5
+    "experience": 20
   },
-  "parent": "cheezsurv:cheezsurv/too_much_coal"
+  "parent": "cheezsurv:cheezsurv/obtain_pigstep"
 }

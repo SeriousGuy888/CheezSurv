@@ -40,5 +40,5 @@
   "rewards": {
     "experience": 15
   },
-  "parent": "cheezsurv:cheezsurv/root"
+  "parent": "cheezsurv:cheezsurv/exploration"
 }

@@ -1,28 +1,45 @@
 {
-    "display": {
-        "title": {
-            "text": "Village Traitor"
-        },
-        "description": {
-            "text": "Be murdered by a zombie villager."
-        },
-        "icon": {
-            "item": "minecraft:rotten_flesh"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
+  "display": {
+    "title": {
+      "text": "Village Treasoniseur"
     },
-    "criteria": {
-        "dead": {
-            "trigger": "minecraft:entity_killed_player",
-            "conditions": {
-                "entity": {
-                    "type": "minecraft:zombie_villager"
-                }
-            }
+    "description": {
+      "text": "Kill or be killed by a zombie villager."
+    },
+    "icon": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "die": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:zombie_villager"
         }
+      }
     },
-    "parent": "cheezsurv:cheezsurv/sell_to_villager"
+    "kill": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:zombie_villager"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "die",
+      "kill"
+    ]
+  ],
+  "rewards": {
+    "experience": 20
+  },
+  "parent": "cheezsurv:cheezsurv/sell_to_villager"
 }

@@ -1,28 +1,28 @@
 {
   "display": {
     "title": {
-      "text": "Too Too Much Iron"
+      "text": "Diamond Age"
     },
     "description": {
-      "text": "Have a stack or more of iron blocks in your inventory."
+      "text": "Obtain a diamond."
     },
     "icon": {
-      "item": "minecraft:iron_block"
+      "item": "minecraft:diamond_ore"
     },
-    "frame": "goal",
-    "show_toast": true,
-    "announce_to_chat": true,
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": false,
     "hidden": false
   },
   "criteria": {
-    "coal": {
+    "adfdsg": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:iron_block"],
+            "items": ["minecraft:diamond"],
             "count": {
-              "min": 64
+              "min": 1
             }
           }
         ]
@@ -30,7 +30,7 @@
     }
   },
   "rewards": {
-      "experience": 15
+    "experience": 5
   },
   "parent": "cheezsurv:cheezsurv/obtain_iron_ore"
 }

@@ -1,13 +1,13 @@
 {
   "display": {
     "title": {
-      "text": "Sharp Hoe"
+      "text": "Scythe"
     },
     "description": {
-      "text": "Kill something using a diamond hoe."
+      "text": "Kill something using a netherite hoe."
     },
     "icon": {
-      "item": "minecraft:diamond_hoe",
+      "item": "minecraft:netherite_hoe",
       "nbt": "{Enchantments:[{id:\"minecraft:sharpness\",lvl:32767s}]}"
     },
     "frame": "goal",
@@ -24,7 +24,7 @@
             "type": "minecraft:player",
             "equipment": {
               "mainhand": {
-                "items": ["minecraft:diamond_hoe"]
+                "items": ["minecraft:netherite_hoe"]
               }
             }
           }
@@ -33,7 +33,7 @@
     }
   },
   "rewards": {
-    "experience": 5
+    "experience": 25
   },
-  "parent": "cheezsurv:cheezsurv/magic_hoe"
+  "parent": "cheezsurv:cheezsurv/trade_diamond_hoe"
 }

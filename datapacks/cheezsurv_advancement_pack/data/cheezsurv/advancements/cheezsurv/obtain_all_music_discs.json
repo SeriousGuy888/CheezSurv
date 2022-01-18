@@ -3,16 +3,9 @@
     "title": {
       "text": "Record Collector"
     },
-    "description": [
-      {
-        "text": "Have all 13 music discs in Minecraft in your inventory.\n"
-      },
-      {
-        "text": "(13, Cat, Blocks, Chirp, Far, Mall, Mellohi, Stal, Strad, Ward, 11, Wait, Pigstep)",
-        "italic": true,
-        "color": "gray"
-      }
-    ],
+    "description": {
+      "text": "Have all the music discs in Minecraft in your inventory."
+    },
     "icon": {
       "item": "minecraft:music_disc_chirp"
     },
@@ -75,5 +68,5 @@
   "rewards": {
     "experience": 50
   },
-  "parent": "cheezsurv:cheezsurv/obtain_all_dyes"
+  "parent": "cheezsurv:cheezsurv/obtain_jukebox"
 }

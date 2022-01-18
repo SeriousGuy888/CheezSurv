@@ -39,5 +39,5 @@
   "rewards": {
     "experience": 500
   },
-  "parent": "cheezsurv:cheezsurv/murder"
+  "parent": "cheezsurv:cheezsurv/obtain_player_head"
 }

@@ -1,13 +1,13 @@
 {
   "display": {
     "title": {
-      "text": "Speedy Souls"
+      "text": "Soul-ar Energy"
     },
     "description": {
       "text": "Obtain an enchanted book with Soul Speed III."
     },
     "icon": {
-      "item": "minecraft:soul_sand"
+      "item": "minecraft:soul_soil"
     },
     "frame": "goal",
     "show_toast": true,
@@ -30,5 +30,5 @@
   "rewards": {
     "experience": 50
   },
-  "parent": "cheezsurv:cheezsurv/obtain_pigstep"
+  "parent": "cheezsurv:cheezsurv/trade_mending_book"
 }
