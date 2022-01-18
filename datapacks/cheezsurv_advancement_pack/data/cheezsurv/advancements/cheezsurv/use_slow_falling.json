@@ -1,10 +1,10 @@
 {
   "display": {
     "title": {
-      "text": "Not Quite an Elytra"
+      "text": "Not Quite an Flight"
     },
     "description": {
-      "text": "Use a slow falling potion in preparation for the ender dragon fight."
+      "text": "Use a slow falling potion."
     },
     "icon": {
       "item": "minecraft:potion",
