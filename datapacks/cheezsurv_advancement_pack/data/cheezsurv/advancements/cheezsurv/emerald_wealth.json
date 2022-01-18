@@ -1,7 +1,7 @@
 {
   "display": {
     "title": {
-      "text": "Look at my Wealth!"
+      "text": "Decorative Currency"
     },
     "description": {
       "text": "Show off your wealth and place down an emerald block."
@@ -23,7 +23,7 @@
   }
   },
   "rewards": {
-      "experience": 15
+      "experience": 5
   },
   "parent": "cheezsurv:cheezsurv/sell_to_villager"
 }

@@ -1,13 +1,13 @@
 {
   "display": {
     "title": {
-      "text": "Jambi Oolahism"
+      "text": "Hyperinflation"
     },
     "description": {
-      "text": "Obtain a stack of emerald blocks."
+      "text": "Obtain a stack of diamond blocks."
     },
     "icon": {
-      "item": "minecraft:emerald_block",
+      "item": "minecraft:diamond_block",
       "nbt": "{Enchantments:[{id:\"minecraft:sharpness\",lvl:32767s}]}"
     },
     "frame": "challenge",
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": ["minecraft:emerald_block"],
+            "items": ["minecraft:diamond_block"],
             "count": {
               "min": 64
             }
@@ -31,7 +31,7 @@
     }
   },
   "rewards": {
-      "experience": 150
+      "experience": 500
   },
-  "parent": "cheezsurv:cheezsurv/emerald_wealth"
+  "parent": "cheezsurv:cheezsurv/obtain_diamond_pick"
 }
