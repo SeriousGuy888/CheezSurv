@@ -4,7 +4,7 @@
       "text": "Sticky"
     },
     "description": {
-      "text": "Obtain a stack of honey blocks."
+      "text": "Obtain a honey block."
     },
     "icon": {
       "item": "minecraft:honey_block"
@@ -22,7 +22,7 @@
           {
             "items": ["minecraft:honey_block"],
             "count": {
-              "min": 64
+              "min": 1
             }
           }
         ]
@@ -30,7 +30,7 @@
     }
   },
   "rewards": {
-    "experience": 100
+    "experience": 10
   },
   "parent": "cheezsurv:cheezsurv/obtain_64_slime_block"
 }
