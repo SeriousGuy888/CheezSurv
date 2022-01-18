@@ -63,6 +63,9 @@
             "items": ["minecraft:music_disc_wait"]
           },
           {
+            "items": ["minecraft:music_disc_otherside"]
+          },
+          {
             "items": ["minecraft:music_disc_pigstep"]
           }
         ]
@@ -72,5 +75,5 @@
   "rewards": {
     "experience": 50
   },
-  "parent": "cheezsurv:cheezsurv/dye_collector"
+  "parent": "cheezsurv:cheezsurv/obtain_all_dyes"
 }

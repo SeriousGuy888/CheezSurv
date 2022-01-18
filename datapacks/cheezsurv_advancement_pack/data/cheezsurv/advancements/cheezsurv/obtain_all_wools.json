@@ -74,5 +74,5 @@
   "rewards": {
     "experience": 100
   },
-  "parent": "cheezsurv:cheezsurv/dye_collector"
+  "parent": "cheezsurv:cheezsurv/obtain_all_dyes"
 }
